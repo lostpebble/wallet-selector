@@ -184,6 +184,7 @@ const WalletConnect: WalletBehaviourFactory<
       }
 
       return _state.client.request({
+        // @ts-ignore
         timeout: 30 * 1000,
         topic: _state.session.topic,
         chainId: getChainId(),

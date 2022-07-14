@@ -192,6 +192,13 @@ const NightlyConnect: WalletBehaviourFactory<
         signedTxs.map((signedTx) => provider.sendTransaction(signedTx))
       );
     },
+
+    async signMessage({ signerId, message }) {
+      if (!message) {
+        throw new Error("Please add message");
+      }
+      return signer.signMessage(message, signerId);
+    },
   };
 };
 
