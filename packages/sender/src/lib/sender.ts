@@ -142,12 +142,6 @@ const Sender: WalletBehaviourFactory<InjectedWallet> = async ({
 
   return {
     async signIn({ contractId, methodNames }) {
-      const existingAccounts = getAccounts();
-
-      if (existingAccounts.length) {
-        return existingAccounts;
-      }
-
       const { accessKey, error } = await _state.wallet.requestSignIn({
         contractId,
         methodNames,
