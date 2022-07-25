@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import type { WalletSelector } from "@near-wallet-selector/core";
+import type { WalletSelector } from "@paras-wallet-selector/core";
 
 import type { ModalOptions, Theme } from "../modal.types";
 import type { ModalRoute } from "./Modal.types";

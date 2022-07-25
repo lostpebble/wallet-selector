@@ -12,8 +12,8 @@ import type {
   Transaction,
   Optional,
   Network,
-} from "@near-wallet-selector/core";
-import { createAction } from "@near-wallet-selector/wallet-utils";
+} from "@paras-wallet-selector/core";
+import { createAction } from "@paras-wallet-selector/wallet-utils";
 
 export interface MyNearWalletParams {
   walletUrl?: string;

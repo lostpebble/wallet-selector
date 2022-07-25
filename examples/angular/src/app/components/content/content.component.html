@@ -11,17 +11,17 @@
       Switch Account
     </button>
   </div>
-  <near-wallet-selector-form
+  <paras-wallet-selector-form
     [account]="account"
     (addMessage)="onSubmit($event)"
-  ></near-wallet-selector-form>
-  <near-wallet-selector-messages
+  ></paras-wallet-selector-form>
+  <paras-wallet-selector-messages
     *ngIf="!!messages.length"
     [messages]="messages"
-  ></near-wallet-selector-messages>
+  ></paras-wallet-selector-messages>
 </ng-container>
 
 <ng-container *ngIf="!accountId">
   <button (click)="signIn()">Log In</button>
-  <near-wallet-selector-sign-in></near-wallet-selector-sign-in>
+  <paras-wallet-selector-sign-in></paras-wallet-selector-sign-in>
 </ng-container>

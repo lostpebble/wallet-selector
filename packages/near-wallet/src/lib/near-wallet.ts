@@ -2,11 +2,11 @@ import {
   WalletModuleFactory,
   BrowserWallet,
   Network,
-} from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
 import {
   setupMyNearWallet,
   MyNearWalletParams,
-} from "@near-wallet-selector/my-near-wallet";
+} from "@paras-wallet-selector/my-near-wallet";
 
 export type NearWalletParams = MyNearWalletParams;
 

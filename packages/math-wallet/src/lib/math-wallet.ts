@@ -6,11 +6,11 @@ import type {
   Account,
   Optional,
   Transaction,
-} from "@near-wallet-selector/core";
-import { getActiveAccount } from "@near-wallet-selector/core";
-import { waitFor } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { getActiveAccount } from "@paras-wallet-selector/core";
+import { waitFor } from "@paras-wallet-selector/core";
 import type { InjectedMathWallet } from "./injected-math-wallet";
-import { signTransactions } from "@near-wallet-selector/wallet-utils";
+import { signTransactions } from "@paras-wallet-selector/wallet-utils";
 
 declare global {
   interface Window {

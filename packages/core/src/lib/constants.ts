@@ -1,4 +1,4 @@
-export const PACKAGE_NAME = "near-wallet-selector";
+export const PACKAGE_NAME = "paras-wallet-selector";
 
 export const CONTRACT = "contract";
 export const PENDING_CONTRACT = "contract:pending";

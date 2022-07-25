@@ -1,5 +1,5 @@
 import React from "react";
-import type { WalletSelector } from "@near-wallet-selector/core";
+import type { WalletSelector } from "@paras-wallet-selector/core";
 
 interface WalletNetworkChangedProps {
   selector: WalletSelector;

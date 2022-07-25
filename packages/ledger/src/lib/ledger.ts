@@ -1,6 +1,6 @@
 import { isMobile } from "is-mobile";
 import { TypedError } from "near-api-js/lib/utils/errors";
-import { signTransactions } from "@near-wallet-selector/wallet-utils";
+import { signTransactions } from "@paras-wallet-selector/wallet-utils";
 import type {
   WalletModuleFactory,
   WalletBehaviourFactory,
@@ -9,8 +9,8 @@ import type {
   HardwareWallet,
   Transaction,
   Optional,
-} from "@near-wallet-selector/core";
-import { getActiveAccount } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { getActiveAccount } from "@paras-wallet-selector/core";
 
 import { isLedgerSupported, LedgerClient } from "./ledger-client";
 import type { Subscription } from "./ledger-client";

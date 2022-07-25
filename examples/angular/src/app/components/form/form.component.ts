@@ -7,7 +7,7 @@ export type Submitted = SubmitEvent & {
 };
 
 @Component({
-  selector: "near-wallet-selector-form",
+  selector: "paras-wallet-selector-form",
   templateUrl: "./form.component.html",
   styleUrls: ["./form.component.scss"],
 })

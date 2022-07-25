@@ -4,22 +4,22 @@ import type {
   AccountView,
   CodeResult,
 } from "near-api-js/lib/providers/provider";
-import type { WalletSelector, AccountState } from "@near-wallet-selector/core";
+import type { WalletSelector, AccountState } from "@paras-wallet-selector/core";
 
 import type { Message } from "../../interfaces/message";
 import type { Submitted } from "../form/form.component";
 import type { Account } from "../../interfaces/account";
 import { distinctUntilChanged, map, Subscription } from "rxjs";
-import type { WalletSelectorModal } from "@near-wallet-selector/modal-ui";
+import type { WalletSelectorModal } from "@paras-wallet-selector/modal-ui";
 import { CONTRACT_ID } from "../../../constants";
-import { Transaction } from "@near-wallet-selector/core";
+import { Transaction } from "@paras-wallet-selector/core";
 
 const SUGGESTED_DONATION = "0";
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const BOATLOAD_OF_GAS = utils.format.parseNearAmount("0.00000000003")!;
 
 @Component({
-  selector: "near-wallet-selector-content",
+  selector: "paras-wallet-selector-content",
   templateUrl: "./content.component.html",
   styleUrls: ["./content.component.scss"],
 })

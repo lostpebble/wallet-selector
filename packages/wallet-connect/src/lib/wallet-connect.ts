@@ -5,8 +5,8 @@ import type {
   BridgeWallet,
   Subscription,
   Transaction,
-} from "@near-wallet-selector/core";
-import { getActiveAccount } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { getActiveAccount } from "@paras-wallet-selector/core";
 
 import WalletConnectClient from "./wallet-connect-client";
 

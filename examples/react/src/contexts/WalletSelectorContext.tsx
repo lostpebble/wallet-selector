@@ -1,17 +1,17 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { map, distinctUntilChanged } from "rxjs";
-import { setupWalletSelector } from "@near-wallet-selector/core";
-import type { WalletSelector, AccountState } from "@near-wallet-selector/core";
-import { setupModal } from "@near-wallet-selector/modal-ui";
-import type { WalletSelectorModal } from "@near-wallet-selector/modal-ui";
-import { setupNearWallet } from "@near-wallet-selector/near-wallet";
-import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
-import { setupSender } from "@near-wallet-selector/sender";
-import { setupMathWallet } from "@near-wallet-selector/math-wallet";
-import { setupNightly } from "@near-wallet-selector/nightly";
-import { setupLedger } from "@near-wallet-selector/ledger";
-import { setupWalletConnect } from "@near-wallet-selector/wallet-connect";
-import { setupNightlyConnect } from "@near-wallet-selector/nightly-connect";
+import { setupWalletSelector } from "@paras-wallet-selector/core";
+import type { WalletSelector, AccountState } from "@paras-wallet-selector/core";
+import { setupModal } from "@paras-wallet-selector/modal-ui";
+import type { WalletSelectorModal } from "@paras-wallet-selector/modal-ui";
+import { setupNearWallet } from "@paras-wallet-selector/near-wallet";
+import { setupMyNearWallet } from "@paras-wallet-selector/my-near-wallet";
+import { setupSender } from "@paras-wallet-selector/sender";
+import { setupMathWallet } from "@paras-wallet-selector/math-wallet";
+import { setupNightly } from "@paras-wallet-selector/nightly";
+import { setupLedger } from "@paras-wallet-selector/ledger";
+import { setupWalletConnect } from "@paras-wallet-selector/wallet-connect";
+import { setupNightlyConnect } from "@paras-wallet-selector/nightly-connect";
 import { CONTRACT_ID } from "../constants";
 
 declare global {

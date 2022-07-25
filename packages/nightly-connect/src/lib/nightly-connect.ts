@@ -12,8 +12,8 @@ import {
   Transaction,
   WalletBehaviourFactory,
   WalletModuleFactory,
-} from "@near-wallet-selector/core";
-import { signTransactions } from "@near-wallet-selector/wallet-utils";
+} from "@paras-wallet-selector/core";
+import { signTransactions } from "@paras-wallet-selector/wallet-utils";
 
 export interface NightlyConnectParams {
   appMetadata: AppMetadata;

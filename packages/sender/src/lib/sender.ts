@@ -7,8 +7,8 @@ import {
   Transaction,
   FunctionCallAction,
   Optional,
-} from "@near-wallet-selector/core";
-import { waitFor } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { waitFor } from "@paras-wallet-selector/core";
 import type { InjectedSender } from "./injected-sender";
 
 declare global {

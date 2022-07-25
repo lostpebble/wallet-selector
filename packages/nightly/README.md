@@ -1,4 +1,4 @@
-# @near-wallet-selector/nightly
+# @paras-wallet-selector/nightly
 
 
 This is the [Nightly](https://www.nightly.app) package for NEAR Wallet Selector.
@@ -9,17 +9,17 @@ The easiest way to use this package is to install it from the NPM registry:
 
 ```bash
 # Using Yarn
-yarn add @near-wallet-selector/nightly
+yarn add @paras-wallet-selector/nightly
 
 # Using NPM.
-npm install @near-wallet-selector/nightly
+npm install @paras-wallet-selector/nightly
 ```
 
 Then use it in your dApp:
 
 ```ts
-import { setupWalletSelector } from "@near-wallet-selector/core";
-import { setupNightly } from "@near-wallet-selector/nightly";
+import { setupWalletSelector } from "@paras-wallet-selector/core";
+import { setupNightly } from "@paras-wallet-selector/nightly";
 
 // Nightly for Wallet Selector can be setup without any params or it can take one optional param.
 const nightly = setupNightly({
@@ -41,8 +41,8 @@ const selector = await setupWalletSelector({
 Assets such as icons can be found in the `/assets` directory of the package. Below is an example using Webpack:
 
 ```ts
-import { setupNightly } from "@near-wallet-selector/nightly";
-import nightlyIconUrl from "@near-wallet-selector/nightly/assets/nightly.png";
+import { setupNightly } from "@paras-wallet-selector/nightly";
+import nightlyIconUrl from "@paras-wallet-selector/nightly/assets/nightly.png";
 
 const nightly = setupNightly({
   iconUrl: nightlyIconUrl
