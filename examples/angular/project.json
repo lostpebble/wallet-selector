@@ -2,7 +2,7 @@
   "projectType": "application",
   "root": "examples/angular",
   "sourceRoot": "examples/angular/src",
-  "prefix": "near-wallet-selector",
+  "prefix": "paras-wallet-selector",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",

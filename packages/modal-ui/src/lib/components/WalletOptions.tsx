@@ -3,7 +3,7 @@ import type {
   WalletSelector,
   ModuleState,
   Wallet,
-} from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
 
 import type { ModalOptions } from "../modal.types";
 

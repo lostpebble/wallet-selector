@@ -74,7 +74,7 @@ describe("connect", () => {
     });
 
     expect(storage.setItem).toHaveBeenCalledWith(
-      "near-wallet-selector:ledger:accounts",
+      "paras-wallet-selector:ledger:accounts",
       JSON.stringify([
         {
           accountId,

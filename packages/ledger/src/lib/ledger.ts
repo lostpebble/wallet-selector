@@ -1,6 +1,6 @@
 import { isMobile } from "is-mobile";
 import { TypedError } from "near-api-js/lib/utils/errors";
-import { signTransactions } from "@near-wallet-selector/wallet-utils";
+import { signTransactions } from "@paras-wallet-selector/wallet-utils";
 import type {
   WalletModuleFactory,
   WalletBehaviourFactory,
@@ -9,8 +9,8 @@ import type {
   HardwareWallet,
   Transaction,
   Optional,
-} from "@near-wallet-selector/core";
-import { getActiveAccount } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { getActiveAccount } from "@paras-wallet-selector/core";
 import type { FinalExecutionOutcome } from "near-api-js/lib/providers";
 
 import { isLedgerSupported, LedgerClient } from "./ledger-client";
@@ -216,6 +216,20 @@ const Ledger: WalletBehaviourFactory<HardwareWallet> = async ({
 
     async getAccounts() {
       return getAccounts();
+    },
+
+    async signMessage({ signerId, message }) {
+      const accounts = getAccounts();
+
+      if (!accounts.length) {
+        throw new Error("Wallet not signed in");
+      }
+
+      return signer.signMessage(
+        message,
+        signerId || accounts[0].accountId,
+        options.network.networkId
+      );
     },
 
     async signAndSendTransaction({ signerId, receiverId, actions }) {

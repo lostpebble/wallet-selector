@@ -1,4 +1,4 @@
-# @near-wallet-selector/core
+# @paras-wallet-selector/core
 
 This is the core package for NEAR Wallet Selector.
 
@@ -8,17 +8,17 @@ The easiest way to use this package is to install it from the NPM registry:
 
 ```bash
 # Using Yarn
-yarn add @near-wallet-selector/core
+yarn add @paras-wallet-selector/core
 
 # Using NPM.
-npm install @near-wallet-selector/core
+npm install @paras-wallet-selector/core
 ```
 
 Then use it in your dApp:
 
 ```ts
-import { setupWalletSelector } from "@near-wallet-selector/core";
-import { setupNearWallet } from "@near-wallet-selector/near-wallet";
+import { setupWalletSelector } from "@paras-wallet-selector/core";
+import { setupNearWallet } from "@paras-wallet-selector/near-wallet";
 
 // The entire set of options can be found in the section below.
 const selector = await setupWalletSelector({

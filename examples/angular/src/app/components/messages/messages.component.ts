@@ -2,7 +2,7 @@ import { Component, Input } from "@angular/core";
 import type { Message } from "../../interfaces/message";
 
 @Component({
-  selector: "near-wallet-selector-messages",
+  selector: "paras-wallet-selector-messages",
   templateUrl: "./messages.component.html",
   styleUrls: ["./messages.component.scss"],
 })

@@ -12,8 +12,8 @@ import type {
   Transaction,
   Optional,
   Network,
-} from "@near-wallet-selector/core";
-import { createAction } from "@near-wallet-selector/wallet-utils";
+} from "@paras-wallet-selector/core";
+import { createAction } from "@paras-wallet-selector/wallet-utils";
 
 export interface MyNearWalletParams {
   walletUrl?: string;
@@ -152,6 +152,20 @@ const MyNearWallet: WalletBehaviourFactory<
 
     async getAccounts() {
       return getAccounts();
+    },
+
+    async signMessage({ signerId, message }) {
+      const account = _state.wallet.account();
+
+      if (!account) {
+        throw new Error("Wallet not signed in");
+      }
+
+      return account.connection.signer.signMessage(
+        message,
+        signerId || account.accountId,
+        options.network.networkId
+      );
     },
 
     async signAndSendTransaction({

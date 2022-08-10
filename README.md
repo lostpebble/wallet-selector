@@ -2,14 +2,14 @@
 
 NEAR Wallet Selector makes it easy for users to interact with your dApp by providing an abstraction over various wallets within the NEAR ecosystem:
 
-- [NEAR Wallet](https://www.npmjs.com/package/@near-wallet-selector/near-wallet) - Browser wallet.
-- [My NEAR Wallet](https://www.npmjs.com/package/@near-wallet-selector/my-near-wallet) - Browser wallet.
-- [Sender](https://www.npmjs.com/package/@near-wallet-selector/sender) - Injected wallet.
-- [Math Wallet](https://www.npmjs.com/package/@near-wallet-selector/math-wallet) - Injected wallet.
-- [Nightly](https://www.npmjs.com/package/@near-wallet-selector/nightly) - Injected wallet.
-- [Ledger](https://www.npmjs.com/package/@near-wallet-selector/ledger) - Hardware wallet.
-- [WalletConnect](https://www.npmjs.com/package/@near-wallet-selector/wallet-connect) - Bridge wallet.
-- [Nightly Connect](https://www.npmjs.com/package/@near-wallet-selector/nightly-connect) - Bridge wallet.
+- [NEAR Wallet](https://www.npmjs.com/package/@paras-wallet-selector/near-wallet) - Browser wallet.
+- [My NEAR Wallet](https://www.npmjs.com/package/@paras-wallet-selector/my-near-wallet) - Browser wallet.
+- [Sender](https://www.npmjs.com/package/@paras-wallet-selector/sender) - Injected wallet.
+- [Math Wallet](https://www.npmjs.com/package/@paras-wallet-selector/math-wallet) - Injected wallet.
+- [Nightly](https://www.npmjs.com/package/@paras-wallet-selector/nightly) - Injected wallet.
+- [Ledger](https://www.npmjs.com/package/@paras-wallet-selector/ledger) - Hardware wallet.
+- [WalletConnect](https://www.npmjs.com/package/@paras-wallet-selector/wallet-connect) - Bridge wallet.
+- [Nightly Connect](https://www.npmjs.com/package/@paras-wallet-selector/nightly-connect) - Bridge wallet.
 
 ## Preview
 
@@ -19,14 +19,14 @@ NEAR Wallet Selector makes it easy for users to interact with your dApp by provi
 
 ## Installation and Usage
 
-The easiest way to use NEAR Wallet Selector is to install the [`core`](https://www.npmjs.com/package/@near-wallet-selector/core) package from the NPM registry:
+The easiest way to use NEAR Wallet Selector is to install the [`core`](https://www.npmjs.com/package/@paras-wallet-selector/core) package from the NPM registry:
 
 ```bash
 # Using Yarn
-yarn add @near-wallet-selector/core
+yarn add @paras-wallet-selector/core
 
 # Using NPM.
-npm install @near-wallet-selector/core
+npm install @paras-wallet-selector/core
 ```
 
 Next, you'll need to install the wallets you want to support:
@@ -34,50 +34,50 @@ Next, you'll need to install the wallets you want to support:
 ```bash
 # Using Yarn
 yarn add \
-  @near-wallet-selector/near-wallet \
-  @near-wallet-selector/my-near-wallet \
-  @near-wallet-selector/sender \
-  @near-wallet-selector/math-wallet \
-  @near-wallet-selector/nightly \
-  @near-wallet-selector/ledger \
-  @near-wallet-selector/wallet-connect \
-  @near-wallet-selector/nightly-connect 
+  @paras-wallet-selector/near-wallet \
+  @paras-wallet-selector/my-near-wallet \
+  @paras-wallet-selector/sender \
+  @paras-wallet-selector/math-wallet \
+  @paras-wallet-selector/nightly \
+  @paras-wallet-selector/ledger \
+  @paras-wallet-selector/wallet-connect \
+  @paras-wallet-selector/nightly-connect 
 
 # Using NPM.
 npm install \
-  @near-wallet-selector/near-wallet \
-  @near-wallet-selector/my-near-wallet \
-  @near-wallet-selector/sender \
-  @near-wallet-selector/math-wallet \
-  @near-wallet-selector/nightly \
-  @near-wallet-selector/ledger \
-  @near-wallet-selector/wallet-connect \
-  @near-wallet-selector/nightly-connect
+  @paras-wallet-selector/near-wallet \
+  @paras-wallet-selector/my-near-wallet \
+  @paras-wallet-selector/sender \
+  @paras-wallet-selector/math-wallet \
+  @paras-wallet-selector/nightly \
+  @paras-wallet-selector/ledger \
+  @paras-wallet-selector/wallet-connect \
+  @paras-wallet-selector/nightly-connect
 ```
 
-Optionally, you can install our [`modal-ui`](https://www.npmjs.com/package/@near-wallet-selector/modal-ui) package for a pre-built interface that wraps the `core` API and presents the supported wallets:
+Optionally, you can install our [`modal-ui`](https://www.npmjs.com/package/@paras-wallet-selector/modal-ui) package for a pre-built interface that wraps the `core` API and presents the supported wallets:
 
 ```bash
 # Using Yarn
-yarn add @near-wallet-selector/modal-ui
+yarn add @paras-wallet-selector/modal-ui
 
 # Using NPM.
-npm install @near-wallet-selector/modal-ui
+npm install @paras-wallet-selector/modal-ui
 ```
 
 Then in your dApp:
 
 ```ts
-import { setupWalletSelector } from "@near-wallet-selector/core";
-import { setupModal } from "@near-wallet-selector/modal-ui";
-import { setupNearWallet } from "@near-wallet-selector/near-wallet";
-import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
-import { setupSender } from "@near-wallet-selector/sender";
-import { setupMathWallet } from "@near-wallet-selector/math-wallet";
-import { setupNightly } from "@near-wallet-selector/nightly";
-import { setupLedger } from "@near-wallet-selector/ledger";
-import { setupWalletConnect } from "@near-wallet-selector/wallet-connect";
-import { setupNightlyConnect } from "@near-wallet-selector/nightly-connect";
+import { setupWalletSelector } from "@paras-wallet-selector/core";
+import { setupModal } from "@paras-wallet-selector/modal-ui";
+import { setupNearWallet } from "@paras-wallet-selector/near-wallet";
+import { setupMyNearWallet } from "@paras-wallet-selector/my-near-wallet";
+import { setupSender } from "@paras-wallet-selector/sender";
+import { setupMathWallet } from "@paras-wallet-selector/math-wallet";
+import { setupNightly } from "@paras-wallet-selector/nightly";
+import { setupLedger } from "@paras-wallet-selector/ledger";
+import { setupWalletConnect } from "@paras-wallet-selector/wallet-connect";
+import { setupNightlyConnect } from "@paras-wallet-selector/nightly-connect";
 
 const selector = await setupWalletSelector({
   network: "testnet",

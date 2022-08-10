@@ -7,8 +7,8 @@ import {
   Transaction,
   FunctionCallAction,
   Optional,
-} from "@near-wallet-selector/core";
-import { waitFor } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { waitFor } from "@paras-wallet-selector/core";
 import type { InjectedSender } from "./injected-sender";
 
 declare global {
@@ -142,12 +142,6 @@ const Sender: WalletBehaviourFactory<InjectedWallet> = async ({
 
   return {
     async signIn({ contractId, methodNames }) {
-      const existingAccounts = getAccounts();
-
-      if (existingAccounts.length) {
-        return existingAccounts;
-      }
-
       const { accessKey, error } = await _state.wallet.requestSignIn({
         contractId,
         methodNames,
@@ -171,6 +165,27 @@ const Sender: WalletBehaviourFactory<InjectedWallet> = async ({
 
     async getAccounts() {
       return getAccounts();
+    },
+
+    async signMessage({ signerId, message }) {
+      const account = _state.wallet.account();
+
+      if (!account) {
+        throw new Error("Wallet not signed in");
+      }
+
+      // Note: When the wallet is locked, Sender returns an empty Signer interface.
+      // Even after unlocking the wallet, the user will need to refresh to gain
+      // access to these methods.
+      if (!account.connection.signer.signMessage) {
+        throw new Error("Wallet is locked");
+      }
+
+      return account.connection.signer.signMessage(
+        message,
+        signerId || account.accountId,
+        options.network.networkId
+      );
     },
 
     async signAndSendTransaction({ signerId, receiverId, actions }) {

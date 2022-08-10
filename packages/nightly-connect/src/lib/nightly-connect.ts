@@ -12,8 +12,8 @@ import {
   Transaction,
   WalletBehaviourFactory,
   WalletModuleFactory,
-} from "@near-wallet-selector/core";
-import { signTransactions } from "@near-wallet-selector/wallet-utils";
+} from "@paras-wallet-selector/core";
+import { signTransactions } from "@paras-wallet-selector/wallet-utils";
 import type { FinalExecutionOutcome } from "near-api-js/lib/providers";
 
 export interface NightlyConnectParams {
@@ -196,6 +196,13 @@ const NightlyConnect: WalletBehaviourFactory<
       }
 
       return results;
+    },
+
+    async signMessage({ signerId, message }) {
+      if (!message) {
+        throw new Error("Please add message");
+      }
+      return signer.signMessage(message, signerId);
     },
   };
 };

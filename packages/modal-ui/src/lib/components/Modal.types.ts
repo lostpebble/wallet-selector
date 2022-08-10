@@ -1,5 +1,5 @@
-import type { Wallet } from "@near-wallet-selector/core";
-import { ModuleState } from "@near-wallet-selector/core";
+import type { Wallet } from "@paras-wallet-selector/core";
+import { ModuleState } from "@paras-wallet-selector/core";
 
 export type AlertMessageModalRouteParams = {
   wallet: Wallet;

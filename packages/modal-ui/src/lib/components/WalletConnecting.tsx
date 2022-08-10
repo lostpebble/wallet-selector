@@ -1,5 +1,5 @@
 import React from "react";
-import { Wallet } from "@near-wallet-selector/core";
+import { Wallet } from "@paras-wallet-selector/core";
 
 interface WalletConnectingProps {
   wallet: Wallet | undefined;

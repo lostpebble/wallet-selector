@@ -3,9 +3,9 @@ import type {
   WalletBehaviourFactory,
   WalletModuleFactory,
   WalletSelectorStore,
-} from "@near-wallet-selector/core";
-import { Optional, Transaction, waitFor } from "@near-wallet-selector/core";
-import { signTransactions } from "@near-wallet-selector/wallet-utils";
+} from "@paras-wallet-selector/core";
+import { Optional, Transaction, waitFor } from "@paras-wallet-selector/core";
+import { signTransactions } from "@paras-wallet-selector/wallet-utils";
 import { isMobile } from "is-mobile";
 import { Signer, utils, transactions as nearTransactions } from "near-api-js";
 import type { NearNightly, InjectedNightly } from "./injected-nightly";
@@ -176,6 +176,13 @@ const Nightly: WalletBehaviourFactory<InjectedWallet> = async ({
       }
 
       return results;
+    },
+
+    async signMessage({ signerId, message }) {
+      if (!message) {
+        throw new Error("Please add message");
+      }
+      return signer.signMessage(message, signerId);
     },
   };
 };

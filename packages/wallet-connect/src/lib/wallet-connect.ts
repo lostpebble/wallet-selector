@@ -5,8 +5,8 @@ import type {
   BridgeWallet,
   Subscription,
   Transaction,
-} from "@near-wallet-selector/core";
-import { getActiveAccount } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { getActiveAccount } from "@paras-wallet-selector/core";
 
 import WalletConnectClient from "./wallet-connect-client";
 
@@ -174,6 +174,28 @@ const WalletConnect: WalletBehaviourFactory<
 
     async getAccounts() {
       return getAccounts();
+    },
+
+    async signMessage({ signerId, message }) {
+      const accounts = getAccounts();
+
+      if (!_state.session || !accounts.length) {
+        throw new Error("Wallet not signed in");
+      }
+
+      return _state.client.request({
+        // @ts-ignore
+        timeout: 30 * 1000,
+        topic: _state.session.topic,
+        chainId: getChainId(),
+        request: {
+          method: "near_signMessage",
+          params: {
+            signerId: signerId || accounts[0].accountId,
+            message,
+          },
+        },
+      });
     },
 
     async signAndSendTransaction({ signerId, receiverId, actions }) {

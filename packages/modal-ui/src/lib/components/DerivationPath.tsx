@@ -1,8 +1,8 @@
 import React, { ChangeEvent, KeyboardEventHandler, useState } from "react";
-import type { Wallet, WalletSelector } from "@near-wallet-selector/core";
+import type { Wallet, WalletSelector } from "@paras-wallet-selector/core";
 import type { ModalOptions } from "../modal.types";
 import type { DerivationPathModalRouteParams } from "./Modal.types";
-import type { HardwareWalletAccount } from "@near-wallet-selector/core";
+import type { HardwareWalletAccount } from "@paras-wallet-selector/core";
 import HardwareWalletAccountsForm from "./HardwareWalletAccountsForm";
 import { WalletConnecting } from "./WalletConnecting";
 

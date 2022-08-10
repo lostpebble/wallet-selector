@@ -6,11 +6,11 @@ import type {
   Account,
   Optional,
   Transaction,
-} from "@near-wallet-selector/core";
-import { getActiveAccount } from "@near-wallet-selector/core";
-import { waitFor } from "@near-wallet-selector/core";
+} from "@paras-wallet-selector/core";
+import { getActiveAccount } from "@paras-wallet-selector/core";
+import { waitFor } from "@paras-wallet-selector/core";
 import type { InjectedMathWallet } from "./injected-math-wallet";
-import { signTransactions } from "@near-wallet-selector/wallet-utils";
+import { signTransactions } from "@paras-wallet-selector/wallet-utils";
 import type { FinalExecutionOutcome } from "near-api-js/lib/providers";
 
 declare global {
@@ -40,6 +40,7 @@ const setupMathWalletState = (): MathWalletState => {
 };
 
 const MathWallet: WalletBehaviourFactory<InjectedWallet> = async ({
+  metadata,
   options,
   store,
   provider,
@@ -101,6 +102,23 @@ const MathWallet: WalletBehaviourFactory<InjectedWallet> = async ({
 
     async getAccounts() {
       return getAccounts();
+    },
+
+    async signMessage({ signerId, message }) {
+      const accounts = getAccounts();
+
+      if (!accounts.length) {
+        throw new Error("Wallet not signed in");
+      }
+
+      // Note: Math Wallet currently hangs when calling signMessage.
+      throw new Error(`Method not supported by ${metadata.name}`);
+
+      return _state.wallet.signer.signMessage(
+        message,
+        signerId || accounts[0].accountId,
+        options.network.networkId
+      );
     },
 
     async signAndSendTransaction({ signerId, receiverId, actions }) {

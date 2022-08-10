@@ -10,5 +10,5 @@ module.exports = {
     "^.+\\.[tj]sx?$": "ts-jest",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  coverageDirectory: "../../coverage/packages/near-wallet-selector",
+  coverageDirectory: "../../coverage/packages/paras-wallet-selector",
 };
