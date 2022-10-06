@@ -8,7 +8,7 @@ NEAR Wallet Selector makes it easy for users to interact with your dApp by provi
 - [Sender](https://www.npmjs.com/package/@near-wallet-selector/sender) - Injected wallet.
 - [Math Wallet](https://www.npmjs.com/package/@near-wallet-selector/math-wallet) - Injected wallet.
 - [Nightly](https://www.npmjs.com/package/@near-wallet-selector/nightly) - Injected wallet.
-- [Meteor Wallet](https://www.npmjs.com/package/@near-wallet-selector/meteor-wallet) - Injected wallet.
+- [Meteor Wallet](https://www.npmjs.com/package/@meteorwallet/wallet-selector) - Injected wallet.
 - [Ledger](https://www.npmjs.com/package/@near-wallet-selector/ledger) - Hardware wallet.
 - [WalletConnect](https://www.npmjs.com/package/@near-wallet-selector/wallet-connect) - Bridge wallet.
 - [Nightly Connect](https://www.npmjs.com/package/@near-wallet-selector/nightly-connect) - Bridge wallet.
@@ -52,7 +52,7 @@ yarn add \
   @near-wallet-selector/here-wallet \
   @near-wallet-selector/math-wallet \
   @near-wallet-selector/nightly \
-  @near-wallet-selector/meteor-wallet \
+  @meteorwallet/wallet-selector \
   @near-wallet-selector/ledger \
   @near-wallet-selector/wallet-connect \
   @near-wallet-selector/nightly-connect \
@@ -67,7 +67,7 @@ npm install \
   @near-wallet-selector/here-wallet \
   @near-wallet-selector/math-wallet \
   @near-wallet-selector/nightly \
-  @near-wallet-selector/meteor-wallet \
+  @meteorwallet/wallet-selector \
   @near-wallet-selector/ledger \
   @near-wallet-selector/wallet-connect \
   @near-wallet-selector/nightly-connect \
@@ -95,7 +95,7 @@ import { setupSender } from "@near-wallet-selector/sender";
 import { setupHereWallet } from "@near-wallet-selector/here-wallet";
 import { setupMathWallet } from "@near-wallet-selector/math-wallet";
 import { setupNightly } from "@near-wallet-selector/nightly";
-import { setupMeteorWallet } from "@near-wallet-selector/meteor-wallet";
+import { setupMeteorWallet } from "@meteorwallet/wallet-selector";
 import { setupLedger } from "@near-wallet-selector/ledger";
 import { setupWalletConnect } from "@near-wallet-selector/wallet-connect";
 import { setupNightlyConnect } from "@near-wallet-selector/nightly-connect";

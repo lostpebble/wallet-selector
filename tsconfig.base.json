@@ -32,7 +32,7 @@
       "@near-wallet-selector/math-wallet": [
         "packages/math-wallet/src/index.ts"
       ],
-      "@near-wallet-selector/meteor-wallet": [
+      "@meteorwallet/wallet-selector": [
         "packages/meteor-wallet/src/index.ts"
       ],
       "@near-wallet-selector/modal-ui": [

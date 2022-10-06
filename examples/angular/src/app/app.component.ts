@@ -7,7 +7,7 @@ import { setupSender } from "@near-wallet-selector/sender";
 import { setupNearFi } from "@near-wallet-selector/nearfi";
 import { setupMathWallet } from "@near-wallet-selector/math-wallet";
 import { setupNightly } from "@near-wallet-selector/nightly";
-import { setupMeteorWallet } from "@near-wallet-selector/meteor-wallet";
+import { setupMeteorWallet } from "@meteorwallet/wallet-selector";
 import { setupNightlyConnect } from "@near-wallet-selector/nightly-connect";
 import { setupWalletConnect } from "@near-wallet-selector/wallet-connect";
 import { setupCoin98Wallet } from "@near-wallet-selector/coin98-wallet";

@@ -1,5 +1,5 @@
 {
-  "name": "@near-wallet-selector/meteor-wallet",
+  "name": "@meteorwallet/wallet-selector",
   "version": "7.0.3",
   "peerDependencies": {
     "near-api-js": "^0.44.2"

@@ -10,7 +10,7 @@ import { setupHereWallet } from "@near-wallet-selector/here-wallet";
 import { setupSender } from "@near-wallet-selector/sender";
 import { setupMathWallet } from "@near-wallet-selector/math-wallet";
 import { setupNightly } from "@near-wallet-selector/nightly";
-import { setupMeteorWallet } from "@near-wallet-selector/meteor-wallet";
+import { setupMeteorWallet } from "@meteorwallet/wallet-selector";
 import { setupNightlyConnect } from "@near-wallet-selector/nightly-connect";
 import { setupNearFi } from "@near-wallet-selector/nearfi";
 import { setupWalletConnect } from "@near-wallet-selector/wallet-connect";
